@@ -1,0 +1,261 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@media all and (min-width: 320px) {
+
+	body {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+	min-height: 100vh;
+	background: linear-gradient(to bottom, rgb(135, 0, 130), rgb(120, 0, 115), rgb(105, 0, 100), rgb(90, 0, 85), rgb(75, 0, 70));
+	font-family: 'Poppins', sans-serif;
+	}
+
+	.wrapper {
+		width: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		position: relative;
+	}
+
+	.wrapper::after {
+		content: '';
+		z-index: -1;
+		inset: 0;
+		position: absolute;
+		background-color: black;
+		opacity: 0.3;
+		border-radius: 7px;
+	}
+
+	.wrapper::before {
+		content: '';
+		z-index: -2;
+		inset: 0;
+		position: absolute;
+		background-color: black;
+		opacity: 0.4;
+		border-radius: 5px;
+	}
+
+	.wrapper header {
+		width: 100%;
+		font-size: 22px;
+		font-weight: 600;
+		padding: 20px 30px;
+		border-bottom: 1px solid #bfbfbf;
+		text-align: center;
+	}
+
+	#form-title {
+		color: lightgray;
+	}
+
+	.wrapper form {
+		margin: 20px 15px 0px 15px;
+	}
+
+	form .dbl-field {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 0px;
+	}
+
+	.dbl-field .field {
+		width: 100%;
+		height: 50px;
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	.message {
+		width: 100%;
+	}
+
+	form .field input, form .message textarea {
+		height: 100%;
+		width: 100%;
+		min-width: 100%;
+		outline: none;
+		padding: 0 18px 0 48px;
+		font-size: 1rem;
+		border-radius: 5px;
+		background-color: ghostwhite;
+		opacity: 0.9;
+		position: relative;
+		transition: 0.4s linear;
+	}
+
+	form .message textarea {
+		resize: none;
+	}
+
+	form .field input::placeholder, form .message textarea::placeholder {
+		color: #bfbfbf;
+	}
+	
+	form .field input:focus, form .message textarea:focus {
+		border: 2px solid mediumseagreen;
+		opacity: 1;
+	}
+
+	.wrapper form i {
+		position: absolute;
+		left: 18px;
+		top: 50%;
+		color: #bfbfbf;
+		font-size: 1.1rem;
+		pointer-events: none;
+		transform: translateY(-50%);
+		transition: 0.4s linear;
+	}
+
+	form .field input:focus ~ i, #message-area:focus ~ i {
+		color: mediumseagreen;
+	}
+	
+	form .message {
+		position: relative;
+	}
+	
+	form .message i {
+		top: 20px;
+		font-size: 20px;
+	}
+
+	form .message textarea {
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 120px;
+		max-height: 300px;
+		padding: 15px 20px 0 48px;
+	}
+
+	form .button-area {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 25px 0;
+	}
+
+	.button-area #submit-btn {
+		width: 100%;
+		font-size: 18px;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		border-radius: 5px;
+		background: linear-gradient(rgb(60, 185, 110), rgb(45, 155, 95), rgb(30, 130, 80), rgb(15, 125, 65), rgb(0, 115, 50), rgb(0, 110, 50));
+		transition: 0.2s linear;
+		padding: 13px 25px;
+		margin-bottom: 0.75rem;
+		box-shadow: 0px 1px 5px 0px rgb(100, 0, 100);
+	}
+
+
+	.button-area span {
+		display: none;
+		color: #0d6efd;
+		text-align: center;
+		font-size: 0.8em;
+	}
+
+}
+
+@media all and (min-width: 480px) {
+
+	.wrapper {
+		width: 95%;
+	}
+
+	.wrapper form {
+		margin: 25px 20px 0px 20px;
+	}
+
+}
+
+@media all and (min-width: 576px) {
+
+	.wrapper {
+		width: 90%;
+	}
+
+}
+
+@media all and (min-width: 768px) {
+
+	.wrapper {
+		width: 80%;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+}
+
+@media all and (min-width: 960px) {
+
+	.wrapper {
+		width: 80%;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.wrapper::after {
+		transition: 0.4s linear;
+	}
+
+	.wrapper:hover::after {
+		opacity: 0.5;
+	}
+
+	.wrapper header {
+		text-align: left;
+	}
+
+	#form-title {
+		transition: 0.3s linear;
+	}
+
+	#form-title:hover {
+		color: ghostwhite;
+	}
+
+	.contact-data {
+		width: 100%;
+		display: flex; flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.field1, .field2 {
+		width: 49% !important;
+	}
+
+	.button-area #submit-btn:focus {
+		transform: translateY(5px);
+		box-shadow: 0px 0px 0px 0px;
+	}
+
+	#submit-btn {
+		margin-bottom: 1rem !important;
+	}
+
+}
+
+@media all and (min-width: 1200px) {
+
+	.wrapper {
+		width: 55%;
+	}
+	
+}
